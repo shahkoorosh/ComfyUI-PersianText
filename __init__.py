@@ -1,8 +1,8 @@
 """
 @author: ShahKoorosh
-@title: ComfyUI-KGnodes
-@nickname: KGnodes
-@description: This Custom node offers various experimental nodes to make it easier to use ComfyUI.
+@title: ComfyUI-PersianText
+@nickname: PersianText
+@description: A powerful ComfyUI node for rendering text with advanced styling options, including full support for Persian/Farsi and Arabic scripts.
 """
 
 from .PersianText import PersianText
