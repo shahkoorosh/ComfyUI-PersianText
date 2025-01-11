@@ -18,7 +18,7 @@ class PersianText:
             "required": {
                 "text": ("STRING", {"multiline": True, "dynamicPrompts": True, "default": "سلام کامفی"}),
                 "font": (available_fonts, {"default": available_fonts[0] if available_fonts else "BYekan.ttf"}),
-                "size": ("INT", {"default": 56, "min": 1, "max": 9999, "step": 1}),
+                "size": ("INT", {"default": 60, "min": 1, "max": 9999, "step": 1}),
                 "text_color": (COLORS, {"default": "black"}),
                 "background_color": (COLORS, {"default": "white"}),
                 "horizontal_align": (["left", "center", "right"], {"default": "center"}),
