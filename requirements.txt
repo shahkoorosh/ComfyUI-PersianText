@@ -1,0 +1,4 @@
+torch
+Pillow
+arabic-reshaper
+torchvision
