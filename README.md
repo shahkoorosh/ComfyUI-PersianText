@@ -105,7 +105,7 @@
 | `background_color_hex` | String    | Enter a custom hex code for the background color (optional).                                    |
 | `horizontal_align`     | Dropdown  | Align text horizontally (`left`, `center`, `right`).                                            |
 | `vertical_align`       | Dropdown  | Align text vertically (`top`, `center`, `bottom`).                                              |
-| `rotation`             | Integer   | Rotate the text around its **own center**.                                                     |
+| `rotation`             | Float     | Rotate the text around its **own center**.                                                     |
 | `offset_x`             | Integer   | Adjust the horizontal position of the text.                                                    |
 | `offset_y`             | Integer   | Adjust the vertical position of the text.                                                      |
 | `shadow_distance`      | Integer   | Set the distance of the shadow from the text.                                                   |
