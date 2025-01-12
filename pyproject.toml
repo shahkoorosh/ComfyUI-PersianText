@@ -1,0 +1,15 @@
+[project]
+name = "persiantext"
+description = "A powerful ComfyUI node for rendering text with advanced styling options, including full support for Persian/Farsi and Arabic scripts."
+version = "1.0.0"
+license = {file = "LICENSE"}
+dependencies = ["torch", "Pillow", "arabic-reshaper", "torchvision"]
+
+[project.urls]
+Repository = "https://github.com/shahkoorosh/ComfyUI-PersianText"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-PersianText"
+Icon = ""
