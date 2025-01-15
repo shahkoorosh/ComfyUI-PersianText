@@ -60,6 +60,8 @@
 
 ## 📂 Installation and Setup
 
+Search for `PersianText` in "Comfy Manager" or alternatively:
+
 1. Go to comfyUI custom_nodes folder, `ComfyUI/custom_nodes/`
 2. Clone the repository `git clone https://github.com/shahkoorosh/ComfyUI-PersianText.git`
 3. Install the requirements `pip install -r requirements.txt`
