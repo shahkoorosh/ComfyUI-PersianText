@@ -2,3 +2,4 @@ torch
 Pillow
 arabic-reshaper
 torchvision
+python-bidi
