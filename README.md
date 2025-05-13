@@ -3,6 +3,7 @@
 [![Python](https://img.shields.io/badge/Python-+3.10-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/github/license/shahkoorosh/ComfyUI-PersianText)](https://github.com/shahkoorosh/ComfyUI-PersianText/blob/main/LICENSE)
 ![version](https://img.shields.io/badge/Version-2.0.0-darkblue)
+![version](https://img.shields.io/badge/dynamic/json?label=version&url=https://raw.githubusercontent.com/shahkoorosh/ComfyUI-PersianText/main/version.json&query=$.version&color=blue)
 [![GitHub Repo stars](https://img.shields.io/github/stars/shahkoorosh/ComfyUI-PersianText?style=social)](https://github.com/shahkoorosh/ComfyUI-PersianText/stargazers)
 
 
