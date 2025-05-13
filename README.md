@@ -1,15 +1,22 @@
-[![ComfyUI](https://img.shields.io/badge/ComfyUI-Compatible-orange)](https://github.com/comfyanonymous/ComfyUI)
-![Node Type](https://img.shields.io/badge/Node_Type:-%20Text%20Rendering-6A5ACD)
-[![Python](https://img.shields.io/badge/Python-+3.10-blue.svg)](https://www.python.org/)
-[![License](https://img.shields.io/github/license/shahkoorosh/ComfyUI-PersianText)](https://github.com/shahkoorosh/ComfyUI-PersianText/blob/main/LICENSE)
-![version](https://img.shields.io/badge/Version-2.0.0-darkblue)
+<div align="center">
+  
+![version](https://img.shields.io/badge/Version-2.0.0-blue)
+[![GitHub issues](https://img.shields.io/github/issues/shahkoorosh/ComfyUI-PersianText?color=red)](https://github.com/shahkoorosh/ComfyUI-PersianText/issues)
 [![GitHub Repo stars](https://img.shields.io/github/stars/shahkoorosh/ComfyUI-PersianText?style=social)](https://github.com/shahkoorosh/ComfyUI-PersianText/stargazers)
+[![Python](https://img.shields.io/badge/Python-+3.10-purple.svg)](https://www.python.org/)
+[![License](https://img.shields.io/github/license/shahkoorosh/ComfyUI-PersianText)](https://github.com/shahkoorosh/ComfyUI-PersianText/blob/main/LICENSE)
+[![YouTube](https://img.shields.io/badge/YouTube-Subscribe-red?logo=youtube&logoColor=white)](https://www.youtube.com/@UD.SMedia)
+
+
+
+
 
 
 # PersianText Node for ComfyUI
 
-**PersianText Node** is a ComfyUI tool for creating styled text in **Persian/Farsi**, **Arabic**, and **English/Latin** scripts. Perfect for posters and multilingual designs, it offers flexible typography features.
 
+**PersianText Node** is a ComfyUI tool for creating styled text in **Persian/Farsi**, **Arabic**, and **English/Latin** scripts. Perfect for posters and multilingual designs, it offers flexible typography features.
+</div>
 <br>
 <br>
 
