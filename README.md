@@ -1,33 +1,61 @@
+[![ComfyUI](https://img.shields.io/badge/ComfyUI-Compatible-orange)](https://github.com/comfyanonymous/ComfyUI)
+![Node Type](https://img.shields.io/badge/Node_Type:-%20Text%20Rendering-6A5ACD)
+[![Python](https://img.shields.io/badge/Python-+3.10-blue.svg)](https://www.python.org/)
+[![License](https://img.shields.io/github/license/shahkoorosh/ComfyUI-PersianText)](https://github.com/shahkoorosh/ComfyUI-PersianText/blob/main/LICENSE)
+![version](https://img.shields.io/badge/Version-2.0.0-darkblue)
+[![GitHub Repo stars](https://img.shields.io/github/stars/shahkoorosh/ComfyUI-PersianText?style=social)](https://github.com/shahkoorosh/ComfyUI-PersianText/stargazers)
+
 
 # PersianText Node for ComfyUI
 
-**PersianText Node**, is an essential tool for designers and creators working with **ComfyUI**. This node provides a powerful and flexible solution for rendering text with a wide range of styling options, including full support for **Persian/Farsi** and **Arabic** scripts. Whether you're creating posters, or text-based visuals, this node brings advanced typography features to your workflow.
+**PersianText Node** is a ComfyUI tool for creating styled text in **Persian/Farsi**, **Arabic**, and **English/Latin** scripts. Perfect for posters and multilingual designs, it offers flexible typography features.
+
 <br>
 <br>
+
+## ⚠️ Breaking Changes in v2.0.0
+
+* **Dual-Language Support**: Now supports mixed Farsi/Arabic *and* English text. Select separate fonts for each language.
+* **Improved HEX Input**: HEX color inputs now work with or without the `#` prefix.
+* **Transparent Background**: Added the option to generate text (and shadows) with a transparent background.
+* **Bug Fixes**: Resolved minor issues for improved stability.
+
+---
+
+
+
+> [!IMPORTANT]
+>The `python-bidi` package is a dependency required for proper rendering of Persian (Farsi) / Arabic text in the ComfyUI-PersianText custom node. It includes a C extension that may require additional setup, especially in environments like ComfyUI with embedded Python. This guide provides step-by-step instructions for installing and testing `python-bidi` using multiple options based on your setup and any issues you encounter.<br> [How to install python-bidi](#python-bidi-installation-guide)
+
+<br>
+<br>
+<br>
+
 <div dir="rtl">
-نود PersianText در ComfyUI به شما امکان می‌دهد متن‌های فارسی را با پشتیبانی کامل از اتصال حروف و راست‌چین (RTL) ایجاد کنید. این نود گزینه‌های پیشرفته‌ای برای طراحی متن ارائه می‌دهد، از جمله:
 
-پشتیبانی کامل از زبان فارسی و عربی <br>
-انتخاب فونت دلخواه: کافیست فایل فونت .ttf را به پوشه Fonts اضافه کنید.<br>
-چرخش متن: متن را حول مرکز خود بچرخانید.<br>
-تنظیم سایه: رنگ، فاصله و میزان محوشدگی سایه را شخصی‌سازی کنید.<br>
-تنظیم موقعیت و اندازه متن: متن را دقیقاً در موقعیت دلخواه خود قرار دهید.<br>
+نود PersianText در ComfyUI به شما امکان می‌دهد متن‌های فارسی و انگلیسی را با پشتیبانی کامل از اتصال حروف ایجاد کنید. این نود گزینه‌های پیشرفته‌ای برای طراحی متن ارائه می‌دهد، از جمله:<br>
+پشتیبانی چندزبانه: نمایش متون فارسی/فارسی، عربی و انگلیسی/لاتین با تنظیم صحیح چیدمان راست به چپ/چپ به راست و شکل‌دهی به حروف.<br>
+فونت‌های سفارشی: افزودن فونت‌های .ttf یا .otf به پوشه فونت‌ها.<br>
+گزینه‌های استایل:<br>
+تنظیم اندازه متن، رنگ‌ها (از طریق پالت یا کد هگز) و چیدمان.<br>
+چرخاندن متن و افزودن سایه‌های قابل تنظیم (فاصله، تاری، رنگ).<br>
+تنظیم اندازه بوم و حاشیه‌ها.<br>
 
+<br>
 
-
-## معلومات للمستخدمين العرب: 
+### معلومات للمستخدمين العرب: <br>
 نود PersianText في ComfyUI يتيح لك إنشاء نصوص عربية بسهولة مع دعم كامل لاتجاه النص من اليمين إلى اليسار (RTL) والاتصالات بين الحروف. الميزات الرئيسية: <br>
-
-دعم كامل للنصوص العربية والفارسية<br>
-إضافة خطوط مخصصة: يمكنك وضع ملفات الخط .ttf في مجلد Fonts.<br>
-تدوير النص: تدوير النص حول مركزه الخاص.<br>
-خيارات الظل: تخصيص اللون والمسافة والتمويه.<br>
-تحكم دقيق في الموضع والحجم: ضع النص في المكان الذي تريده بدقة.<br>
-هذا النود أداة رائعة لتصميم الجرافيك بالنصوص العربية والفارسية!<br>
+الدعم متعدد اللغات: عرض النصوص بالفارسية/الفارسية، العربية، والإنجليزية/اللاتينية مع محاذاة RTL/LTR الصحيحة وتشكيل الحروف.<br>
+الخطوط المخصصة: إضافة خطوط .ttf أو .otf إلى مجلد الخطوط.<br>
+خيارات التصميم:<br>
+ضبط حجم النص، الألوان (من خلال اللوحة أو الكود السداسي)، والمحاذاة.<br>
+تدوير النص وإضافة ظلال قابلة للتخصيص (المسافة، التمويه، اللون).<br>
+تحديد حجم اللوحة والهوامش.<br>
 </div>
 <br>
 
-![image](https://github.com/user-attachments/assets/926ad95b-9038-40fc-9b37-7f3726c2fb2a)
+![image](https://github.com/user-attachments/assets/fd396567-14d5-4780-92d1-6d8e4b0c998c)
+
 
 
 <br>
@@ -37,16 +65,15 @@
 ## 🌟 Features
 
 ### 🔤 **Full Support for Persian/Farsi and Arabic Scripts**
-- Render text seamlessly in **Persian/Farsi** or **Arabic**, with correct **glyph shaping** and **right-to-left (RTL) alignment**. 
-- Built-in integration with **arabic-reshaper** ensures proper character connections and shaping for complex scripts.
-
-### 🎨 **Rich Text Styling Options**
-- **Custom Fonts**: Place your favorite `.ttf` fonts in the `Fonts` folder and instantly use them in the node.
-- **Dynamic Colors**: Choose text, background, and shadow colors from a predefined palette or provide custom hex codes.
-- **Adjustable Text Size**: From tiny captions to large headings, control text size with precision.
-- **Alignment Options**: Align your text horizontally (`left`, `center`, `right`) and vertically (`top`, `center`, `bottom`).
-- **Offset Controls**: Fine-tune the text position with adjustable `X` and `Y` offsets.
-- **Rotations**: Rotate text **around its own center**, ensuring precise alignment and perfect positioning.
+- **Multilingual Support**: Renders Persian, Arabic, and English text with proper RTL/LTR and glyph shaping.
+- **Custom Fonts**: Use `.ttf` or `.otf` fonts from the `Fonts` folder.
+- **Styling**:
+  - **Dynamic Colors**: Choose text, background, and shadow colors from a predefined palette or provide custom hex codes.
+  - **Alignment Options**: Align your text horizontally (`left`, `center`, `right`) and vertically (`top`, `center`, `bottom`).
+  - **Offset Controls**: Fine-tune the text position with adjustable `X` and `Y` offsets.
+  - **Rotations**: Rotate text **around its own center**, ensuring precise alignment and perfect positioning.
+- **Transparent Background**: Optional for workflow flexibility.
+- Specify custom canvas sizes (from 1x1 up to 4096x4096 pixels) to fit your design needs.
 
 ### 🌌 **Enhanced Styling for Shadows**
 - Add beautiful shadows to your text with customizable:
@@ -54,8 +81,8 @@
   - **Shadow Blur Intensity**
   - **Shadow Color**
 
-### 🖼️ **Flexible Canvas Dimensions**
-- Specify custom canvas sizes (from 1x1 up to 4096x4096 pixels) to fit your design needs.
+
+
 
 ---
 
@@ -68,58 +95,157 @@ Search for `PersianText` in "Comfy Manager" or alternatively:
 3. Install the requirements `pip install -r requirements.txt`
 4. **Add Your Fonts**:
    - Navigate to the `Fonts` folder inside the repository.
-   - Add your favorite `.ttf` fonts. Any `.ttf` font placed in this folder will appear in the font dropdown menu in the node.
+   - Add `.ttf` or `.otf` fonts to the `Fonts` folder. (Any `.ttf` or `.otf` font placed in this folder will appear in the font dropdown menu in the node.)
 5. Restart ComfyUI.
 
+---
+### python-bidi Installation Guide
+### Prerequisites
+- **Python**: Ensure you have Python installed (ComfyUI typically includes an embedded Python in its portable distribution, e.g., `python_embeded`).
+- **ComfyUI**: This guide assumes you are using the ComfyUI Windows portable version (e.g., `ComfyUI_windows_portable`).
+- **Administrator Privileges**: Some steps may require admin rights to install build tools or dependencies.
+
+---
+
+### Installation Options
+
+### Option 1: Basic Installation in ComfyUI Environment
+This is the simplest approach, reinstalling `python-bidi` within ComfyUI's embedded Python environment.
+
+1. **Activate ComfyUI's Embedded Python**:
+   - Open a command prompt and navigate to your ComfyUI directory (e.g., `D:\ComfyUI_windows_portable`).
+   - Run the following commands to set up and update `pip`:
+     ```bash
+     python_embeded\python.exe -m ensurepip
+     python_embeded\python.exe -m pip install --upgrade pip
+     ```
+     - Note: If you get `No module named ensurepip`, it’s okay—proceed to the next step, as `pip` is likely already present.
+
+2. **Install `python-bidi`**:
+   - Install the package using ComfyUI's Python:
+     ```bash
+     python_embeded\python.exe -m pip install python-bidi
+     ```
+
+3. **Verify Installation**:
+   - Test if the module is available:
+     ```bash
+     python_embeded\python.exe -c "from bidi.algorithm import get_display; print('Success')"
+     ```
+   - **Expected Output**: `Success` (no errors).
+   - **If Successful**: Proceed to ComfyUI.
+   - **If Error (e.g., `ModuleNotFoundError: No module named 'bidi.bidi'`)**: The C extension didn’t compile. Move to [Option 2](#option-2-install-build-tools) or [Option 3](#option-3-use-a-prebuilt-wheel).
+
+---
+
+### Option 2: Install Build Tools
+If Option 1 fails due to a missing C extension (`bidi.bidi`), install Microsoft Visual C++ Build Tools to compile it.
+
+1. **Install Visual C++ Build Tools**:
+   - Download the installer from [Microsoft Visual Studio Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
+   - Run the installer and select the **"Desktop development with C++"** workload.
+   - Ensure the following components are included:
+     - MSVC v142 - VS 2019 C++ x64/x86 build tools (or the latest version).
+     - Windows SDK (e.g., 10.0 or the latest).
+     - English language pack (if needed).
+   - Click **Install** and wait for completion (may take time).
+   - Restart your computer after installation.
+
+2. **Reinstall `python-bidi`**:
+   - Uninstall the existing version:
+     ```bash
+     python_embeded\python.exe -m pip uninstall python-bidi -y
+     ```
+   - Reinstall with compilation:
+     ```bash
+     python_embeded\python.exe -m pip install python-bidi
+     ```
+
+3. **Verify Installation**:
+   - Run the verification command:
+     ```bash
+     python_embeded\python.exe -c "from bidi.algorithm import get_display; print('Success')"
+     ```
+   - **Expected Output**: `Success`.
+   - **If Successful**: Proceed to ComfyUI.
+   - **If Error**: Note the error message and try [Option 3](#option-3-use-a-prebuilt-wheel), then report the details to the repository maintainers.
+
+---
+
+### Option 3: Use a Prebuilt Wheel
+If compilation fails even with build tools (e.g., due to Python version incompatibility), use a prebuilt wheel.
+
+1. **Check Python Version**:
+   - Determine your Python version:
+     ```bash
+     python_embeded\python.exe -c "import sys; print(sys.version)"
+     ```
+   - Note the version (e.g., `3.10.12`) and architecture (e.g., `win_amd64` for 64-bit).
+
+2. **Download a Wheel**:
+   - Visit [PyPI](https://pypi.org/project/python-bidi/#files) or [Wheelodex](https://www.wheelodex.org/projects/python-bidi/).
+   - Download a `.whl` file matching your Python version and architecture (e.g., `python_bidi-0.6.6-cp310-cp310-win_amd64.whl` for Python 3.10 on 64-bit Windows).
+   - Save the file to a convenient location (e.g., `E:\Downloads`).
+
+3. **Install the Wheel**:
+   - Install the downloaded wheel:
+     ```bash
+     python_embeded\python.exe -m pip install "E:\Downloads\python_bidi-0.6.6-cp310-cp310-win_amd64.whl"
+     ```
+
+4. **Verify Installation**:
+   - Run the verification command:
+     ```bash
+     python_embeded\python.exe -c "from bidi.algorithm import get_display; print('Success')"
+     ```
+   - **Expected Output**: `Success`.
 ---
 
 ## 🚀 How to Use
 
-1. Open ComfyUI and locate the **PersianText Node** under the category `🎨KG`.
-2. Connect the node to your workflow.
-3. Configure the inputs:
-   - **Text**: Write your message in Persian/Farsi, Arabic, or any other supported language.
-   - **Font**: Select a font from the dropdown menu (populated by fonts in the `Fonts` folder).
-   - **Styling**: Customize size, colors, alignment, rotation, and shadow options to match your design.
-   - **Canvas Dimensions**: Set the `image_width` and `image_height` to define your canvas size.
-4. Execute the node to render the styled text.
+1. Find **PersianText Node** in ComfyUI under `🎨KG`.
+2. Configure:
+   - **Text**: Enter Persian, Arabic, English, or mixed text.
+   - **Fonts**: Choose Farsi/Arabic and English/Latin fonts.
+   - **Style**: Set size, colors, alignment, rotation, shadow, and padding.
+   - **Canvas**: Set width, height, or enable transparent background.
+3. Run to generate text image and mask.
 
----
-
-## 🛠️ Advanced Customization
-
-- **Custom Colors**: Use predefined colors from the palette or define your own hex codes (e.g., `#FF5733` for a vibrant orange).
-- **Precise Placement**: Adjust offsets (`offset_x`, `offset_y`) for pixel-perfect positioning.
-- **Rotations Around Text Center**: Apply rotations to text, ensuring it pivots around its **own center** rather than the canvas center.
-- **Shadow Effects**: Experiment with shadow distance, blur, and color to create stunning visuals.
 
 ---
 
 ## 📜 Input Parameters
 
-| Parameter               | Type      | Description                                                                                     |
-|-------------------------|-----------|-------------------------------------------------------------------------------------------------|
-| `text`                 | String    | The text to render. Fully supports Persian/Farsi, Arabic, and other languages.                  |
-| `font`                 | Dropdown  | Select a font from the `Fonts` folder.                                                         |
-| `size`                 | Integer   | Specify the font size.                                                                          |
-| `text_color`           | Dropdown  | Choose a color for the text from the palette.                                                   |
-| `text_color_hex`       | String    | Enter a custom hex code for the text color (optional).                                          |
-| `background_color`     | Dropdown  | Choose a background color for the canvas.                                                      |
-| `background_color_hex` | String    | Enter a custom hex code for the background color (optional).                                    |
-| `horizontal_align`     | Dropdown  | Align text horizontally (`left`, `center`, `right`).                                            |
-| `vertical_align`       | Dropdown  | Align text vertically (`top`, `center`, `bottom`).                                              |
-| `rotation`             | Float     | Rotate the text around its **own center**.                                                     |
-| `offset_x`             | Integer   | Adjust the horizontal position of the text.                                                    |
-| `offset_y`             | Integer   | Adjust the vertical position of the text.                                                      |
-| `shadow_distance`      | Integer   | Set the distance of the shadow from the text.                                                   |
-| `shadow_blur`          | Integer   | Adjust the intensity of the shadow blur.                                                        |
-| `shadow_color`         | Dropdown  | Choose a color for the shadow.                                                                  |
-| `shadow_color_hex`     | String    | Enter a custom hex code for the shadow color (optional).                                        |
-| `image_width`          | Integer   | Specify the width of the canvas.                                                                |
-| `image_height`         | Integer   | Specify the height of the canvas.                                                               |
-| `direction`            | Dropdown  | Choose the text direction (`LTR` or `RTL`).                                                     |
+| Parameter               | Type      | Description                              |
+|-------------------------|-----------|------------------------------------------|
+| Text                   | String    | Persian, Arabic, English, or mixed text. |
+| Farsi/Arabic Font      | Dropdown  | Font for Persian/Arabic text.           |
+| English/Latin Font     | Dropdown  | Font for English/Latin text.            |
+| Size                   | Integer   | Font size (1-256).                      |
+| Text Color             | Dropdown  | Text color from palette.                |
+| Text Color Hex         | String    | Custom text color (e.g., `#000000`).    |
+| Background Color       | Dropdown  | Background color from palette.          |
+| Background Color Hex   | String    | Custom background color (e.g., `#FFFFFF`). |
+| Horizontal Align       | Dropdown  | `left`, `center`, `right`.              |
+| Vertical Align         | Dropdown  | `top`, `center`, `bottom`.              |
+| Image Width            | Integer   | Canvas width (1-4096).                  |
+| Image Height           | Integer   | Canvas height (1-4096).                 |
+| Rotation               | Float     | Text rotation (-360 to 360).            |
+| Offset X               | Integer   | Horizontal offset (-256 to 256).        |
+| Offset Y               | Integer   | Vertical offset (-256 to 256).          |
+| Shadow Distance        | Float     | Shadow offset (0-256).                  |
+| Shadow Blur            | Float     | Shadow blur (0-256).                    |
+| Shadow Color           | Dropdown  | Shadow color from palette.              |
+| Shadow Color Hex       | String    | Custom shadow color (e.g., `#000000`).  |
+| Padding                | Integer   | Space around text (0-256).              |
+| Transparent Background | Boolean   | Enable transparent background.          |
 
 ---
+
+### Troubleshooting
+- **Compilation Errors**: If you see errors during `pip install python-bidi` (e.g., missing `cl.exe`), ensure the Visual C++ Build Tools installation includes the C++ workload and SDK. You may need to repair the installation via the Visual Studio Installer.
+- **Persistent Issues**: If none of the options work, share the full error output from the `pip install` or verification command with the repository maintainers for further assistance.
+- **Python Version Mismatch**: Ensure the wheel or installation matches your ComfyUI Python version (check with the version command above).
 
 ## 📂 Contributing and Support
 
@@ -141,3 +267,5 @@ A huge thank you for **ComfyUI Essentials**, a cornerstone project that provided
 
 Both of your contributions to the ComfyUI ecosystem have been invaluable, and this project is deeply grateful for the groundwork you’ve provided. Thank you for your dedication and effort in making the community stronger! 🌟
 
+---
+Thank you for using ComfyUI-PersianText!
