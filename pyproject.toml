@@ -1,9 +1,9 @@
 [project]
 name = "persiantext"
 description = "A powerful ComfyUI node for rendering text with advanced styling options, including full support for Persian/Farsi and Arabic scripts."
-version = "1.0.1"
+version = "2.0.0"
 license = {file = "LICENSE"}
-dependencies = ["torch", "Pillow", "arabic-reshaper", "torchvision"]
+dependencies = ["torch", "Pillow", "arabic-reshaper", "torchvision", "python-bidi"]
 
 [project.urls]
 Repository = "https://github.com/shahkoorosh/ComfyUI-PersianText"
