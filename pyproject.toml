@@ -1,5 +1,5 @@
 [project]
-name = "ComfyUI-PersianText"
+name = "PersianText"
 description = "A powerful ComfyUI node for rendering text with advanced styling options, including full support for Persian/Farsi and Arabic scripts."
 version = "2.0.0"
 license = {file = "LICENSE"}
