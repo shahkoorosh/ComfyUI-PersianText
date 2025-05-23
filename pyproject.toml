@@ -1,7 +1,7 @@
 [project]
 name = "comfyui-persiantext"
 description = "A powerful ComfyUI node for rendering text with advanced styling options, including full support for Persian/Farsi and Arabic scripts."
-version = "2.0.0"
+version = "2.0.1"
 license = {file = "LICENSE"}
 dependencies = ["torch", "Pillow", "arabic-reshaper", "torchvision", "python-bidi"]
 
