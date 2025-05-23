@@ -1,6 +1,6 @@
 <div align="center">
   
-![version](https://img.shields.io/badge/Version-2.0.0-blue)
+![version](https://img.shields.io/badge/Version-2.0.1-blue)
 [![GitHub issues](https://img.shields.io/github/issues/shahkoorosh/ComfyUI-PersianText?color=red)](https://github.com/shahkoorosh/ComfyUI-PersianText/issues)
 [![GitHub Repo stars](https://img.shields.io/github/stars/shahkoorosh/ComfyUI-PersianText?style=social)](https://github.com/shahkoorosh/ComfyUI-PersianText/stargazers)
 [![Python](https://img.shields.io/badge/Python-+3.10-purple.svg)](https://www.python.org/)
