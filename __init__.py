@@ -53,7 +53,7 @@ else:
     current_dir = Path(__file__).parent
     for filename in os.listdir(current_dir):
         if filename.endswith(".py") and filename != "__init__.py":
-            module_name = f"{current_dir.stem}.{filename[:-3]}"
+            module_name = f"{__name__}.{filename[:-3]}"
             try:
                 node_module = importlib.import_module(module_name)
                 if hasattr(node_module, "NODE_CLASS_MAPPINGS"):
