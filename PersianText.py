@@ -145,9 +145,12 @@ class PersianText:
         farsi_font_path = os.path.join(font_dir, "arial.ttf" if farsi_font == "default" else farsi_font)
         latin_font_path = os.path.join(font_dir, "arial.ttf" if latin_font == "default" else latin_font)
 
+        basic_layout = ImageFont.Layout.BASIC if hasattr(ImageFont, "Layout") else getattr(ImageFont, "LAYOUT_BASIC", None)
+        font_kwargs = {"layout_engine": basic_layout} if basic_layout is not None else {}
+
         try:
-            arabic_selected_font = ImageFont.truetype(farsi_font_path, size)
-            latin_selected_font = ImageFont.truetype(latin_font_path, size)
+            arabic_selected_font = ImageFont.truetype(farsi_font_path, size, **font_kwargs)
+            latin_selected_font = ImageFont.truetype(latin_font_path, size, **font_kwargs)
         except Exception as e:
             raise ValueError(f"Failed to load fonts: {str(e)}")
 
